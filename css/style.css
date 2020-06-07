@@ -1,34 +1,59 @@
 body {
     font-family: "Lato", sans-serif;
+    background-color: #fff;
 }
   
 .sidenav {
   height: 100%;
   width: 5%;
-  position: fixed;
   z-index: 1;
-  top: 0;
   left: 0;
-  background-color: #fff;
-  overflow-x: hidden;
+  top: 0;
+  position: fixed;
   padding-top: 20px;
+  overflow-x: hidden;
   border-right: solid #000 5px;
 }
-  
+
 .sidenav a {
+  font-size: 25px;
   padding: 6px 8px 6px 16px;
   text-decoration: none;
-  font-size: 25px;
-  color: #818181;
   display: block;
+  color: #000;
 }
 
 .sidenav a:hover {
-  color: #f1f1f1;
+  color: #818181;
 }
 
 .main {
-  margin-left: 160px;
-  font-size: 28px;
-  padding: 0px 10px;
+  height: 100%;
+  margin-left: 4%;
+  padding: 0px 11px;
+}
+
+.banner {
+  height: 40%;
+  background-image: url("https://via.placeholder.com/468x60?text=468x60+Full+Banner");
+}
+
+.profile p  {
+  font-size: large;
+  font-weight: bold;
+}
+
+span a {
+  text-decoration: none;
+  color: #000;
+}
+
+.tape {
+  border-bottom: solid #000 2px;
+  border-top: solid #000 2px;
+}
+
+.user-image {
+  border: solid #000 3px;
+  border-radius: 5px;
 }
