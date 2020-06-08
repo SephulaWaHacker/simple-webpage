@@ -69,8 +69,9 @@ span a {
 }
 
 .posts {
-  margin: 5px 0px 0px 30px;
   width: 65%;
+  margin: 15px 0px 0px 0px;
+  padding-left: 50px;
 }
 
 .associcates {
@@ -95,7 +96,7 @@ span a {
 
 .line {
   display: inline-block;
-  border-top: 2px solid black;
+  border-top: solid #000 2px ;
   width: 12em;
   height: 0.2em;
 }
@@ -109,8 +110,23 @@ span a {
   display: inline-block;
   font-size: 50px;
   text-decoration: none;
-  /* display: block; */
   color: #000;
   border: solid #000 1px;
   margin-top: 5px !important; 
+}
+
+.card {
+  font-size: 25px;
+}
+
+.user-input {
+  border: solid #000 2px;
+  display: inline-block;
+  width: 17em;
+  height: 1.5em;
+}
+
+.dummy-input {
+  width: 20em;
+  margin: 0px 5px 2px 5px;
 }
