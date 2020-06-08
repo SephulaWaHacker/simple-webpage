@@ -55,8 +55,7 @@ span a {
 }
 
 .user-image {
-  border: solid #000 10px;
-  border-radius: 5px;
+  border: solid #000 5px;
 }
 
 .righty {
@@ -117,16 +116,62 @@ span a {
 
 .card {
   font-size: 25px;
+  margin-bottom: 10px;
 }
 
-.user-input {
+.card-items {
   border: solid #000 2px;
   display: inline-block;
-  width: 17em;
+  width: 17.2em;
   height: 1.5em;
 }
 
 .dummy-input {
   width: 20em;
   margin: 0px 5px 2px 5px;
+  border: solid #000 1px;
+  font-weight: 800;
+}
+
+.card-image {
+  display: inline-block;
+  font-size: 110%;
+  text-decoration: none;
+  color: #000;
+  border: solid #000 1px;
+  margin-top: 5px !important; 
+}
+
+.post-card {
+  font-size: 25px;
+  margin-bottom: 10px;
+}
+
+.post-card .card-items {
+  border: solid #000 2px;
+  display: inline-block;
+  margin-top: 5px;
+  padding: 0px 0px 0px 4px;
+  width: 17em;
+  height: 6em;
+  color: #000;
+} 
+
+.row1 {
+  font-size: 15px;
+}
+
+.row2 {
+  font-size: 10px;
+}
+
+.fa-times-circle {
+  font-size: 70px;
+  color: #000;
+}
+
+.bold-link {
+  color: #000;
+  text-decoration: none;
+  font-size: 18px;
 }
