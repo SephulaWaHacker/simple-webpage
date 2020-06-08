@@ -75,6 +75,7 @@ span a {
 
 .associcates {
   margin: 5px 0px 0px 5px;
+  width: 25%;
 }
 
 .user {
@@ -84,4 +85,16 @@ span a {
 .mysite {
   text-decoration: none;
   color: #000;
+}
+
+.pline { 
+  display: inline-block;
+  padding: 1em;
+}
+
+.line {
+  display: inline-block;
+  border-top: 2px solid black;
+  width: 10em;
+  height: 0.2em;
 }
