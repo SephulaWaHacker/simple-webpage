@@ -34,11 +34,12 @@ body {
 }
 
 .banner {
+  padding: 5px;
   height: 40%;
   background-image: url("https://via.placeholder.com/468x60?text=468x60+Full+Banner");
 }
 
-.profile p  {
+.info {
   font-size: large;
   font-weight: bold;
 }
@@ -57,3 +58,13 @@ span a {
   border: solid #000 3px;
   border-radius: 5px;
 }
+
+.righty {
+  float: right;
+  margin-top: -5px;
+}
+
+/* .inline { */
+  /* float: left; */
+  /* display: inline; */
+/* } */

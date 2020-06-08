@@ -8,6 +8,7 @@
     <title>Simple Webpage</title>
 </head>
 <body>
+
     <div class="sidenav">
         <a href="#home"><i class="fas fa-home"></i></a>
         <a href="#profile"><i class="fas fa-user"></i></a>
@@ -19,16 +20,14 @@
     </div>
       
     <div class="main">
-        <div class="banner">
-            <div class="info" style=" margin-left: 5%;">
-                <img class="user-image" src="" alt="user picture">
-                <div class="profile" style="display: inline;">
-                    <p>Google+ Page</p>
-                    <a href="#mysite" style="text-decoration:none">www.mysite.co.za</a>
-                </div>
+        <div class="header">
+            <div class="banner">
+                <p class="info" style=" margin-left: 5%;">
+                    <img class="user-image" src="https://via.placeholder.com/150" alt="user picture"> Google+ Page
+                    <br>
+                    <a href="#mysite" style="text-decoration:none" color="#000">www.mysite.co.za</a>
+                </p>
             </div>
-        </div>
-        <div class="content">
             <div class="tape">
                 <div style="margin-left: 20px;">
                     <span><a href="#about">About |</a></span>
@@ -36,11 +35,18 @@
                     <span><a href="#photos"> Photos |</a></span>
                     <span><a href="#videos"> Videos |</a></span>
                     <span><a href="#comments"> Comments</a></span>
+                    <span class="righty">
+                        View profile of all
+                        <i class="fas fa-sort-down" style="font-size: 150%;"></i>
+                        <i class="fas fa-share-square"></i>
+                        <div style="background-color: #b1b1b1; border-radius: 2px; display: inline; border: solid #000 1px;">
+                            <i class="fas fa-asterisk"></i>
+                            <i class="fas fa-share-square"></i>
+                        </div>
+                    </span>
                 </div>
-                <!-- <div class="belt-item" style="margin-right: -25px;">hello</div> -->
             </div>
-            <br>
-        </div> 
-    </div>      
+        </div>
+    </div> 
 </body>
 </html>
