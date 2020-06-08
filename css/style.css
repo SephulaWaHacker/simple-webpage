@@ -21,6 +21,7 @@ body {
   text-decoration: none;
   display: block;
   color: #000;
+  margin-bottom: 5px;
 }
 
 .sidenav a:hover {
@@ -34,8 +35,7 @@ body {
 }
 
 .banner {
-  padding: 5px;
-  height: 40%;
+  padding: 50px 0px 5px 30px;
   background-image: url("https://via.placeholder.com/468x60?text=468x60+Full+Banner");
 }
 
@@ -55,7 +55,7 @@ span a {
 }
 
 .user-image {
-  border: solid #000 3px;
+  border: solid #000 10px;
   border-radius: 5px;
 }
 
@@ -64,7 +64,24 @@ span a {
   margin-top: -5px;
 }
 
-/* .inline { */
-  /* float: left; */
-  /* display: inline; */
-/* } */
+.inline {
+  float: left;
+}
+
+.posts {
+  margin: 5px 0px 0px 30px;
+  width: 65%;
+}
+
+.associcates {
+  margin: 5px 0px 0px 5px;
+}
+
+.user {
+  display: inline;
+}
+
+.mysite {
+  text-decoration: none;
+  color: #000;
+}
