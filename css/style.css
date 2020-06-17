@@ -153,16 +153,19 @@ span a {
   margin-top: 5px;
   padding: 0px 0px 0px 4px;
   width: 17em;
-  height: 6em;
+  height: 6.5em;
   color: #000;
 } 
 
 .row1 {
   font-size: 15px;
+  display: block;
 }
 
 .row2 {
-  font-size: 10px;
+  font-size: 0.5em;
+  margin-top: -2.4em;
+  display: block;
 }
 
 .fa-times-circle {
@@ -170,8 +173,30 @@ span a {
   color: #000;
 }
 
+.times-circle {
+  display: inline-block;
+  margin-top: -0.7em;
+}
+
+.times-circle .times-link{
+  vertical-align: top;
+}
+
+.times-circle p {
+  font-size: 0.5em;
+  margin-top: -0.1em;
+  word-wrap: break-word;
+}
 .bold-link {
+  display: block;
   color: #000;
   text-decoration: none;
-  font-size: 18px;
+  font-size: 0.6em;
+  line-height: 1em;
+  /* text-align: center; */
+}
+
+.mini-tape {
+  border-bottom: solid #000 2px;
+  border-top: solid #000 2px;
 }
