@@ -151,7 +151,7 @@ span a {
   border: solid #000 2px;
   display: inline-block;
   margin-top: 5px;
-  padding: 0px 0px 0px 4px;
+  /* padding: 0px 0px 0px 4px; */
   width: 17em;
   height: 6.5em;
   color: #000;
@@ -193,10 +193,17 @@ span a {
   text-decoration: none;
   font-size: 0.6em;
   line-height: 1em;
-  /* text-align: center; */
 }
 
 .mini-tape {
-  border-bottom: solid #000 2px;
   border-top: solid #000 2px;
+}
+
+.comments {
+  border: solid #000 2px;
+  border-top: none;
+  display: block;
+  margin-left: 1.6em;
+  overflow: auto;
+  width: 16.5em;
 }
