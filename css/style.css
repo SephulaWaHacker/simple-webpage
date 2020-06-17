@@ -215,7 +215,10 @@ span a {
   overflow: auto;
   width: 16.5em;
 }
+.comments button:hover {
+  background-color: #808080;
+}
 
-.comments input {
-  margin-left: 1em;
+.comments i {
+  font-size: 1.3em;
 }
