@@ -162,6 +162,13 @@ span a {
   display: block;
 }
 
+.row1 i {
+  float: right;
+  margin-right: 5px;
+  font-size: 1.3em;
+}
+
+
 .row2 {
   font-size: 0.5em;
   margin-top: -2.4em;
@@ -207,4 +214,8 @@ span a {
   margin-left: 1.6em;
   overflow: auto;
   width: 16.5em;
+}
+
+.comments input {
+  margin-left: 1em;
 }
