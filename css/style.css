@@ -197,6 +197,7 @@ span a {
 
 .mini-tape {
   border-top: solid #000 2px;
+  font-size: 0.75em;
 }
 
 .comments {
