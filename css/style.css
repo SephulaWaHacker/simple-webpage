@@ -222,3 +222,8 @@ span a {
 .comments i {
   font-size: 1.3em;
 }
+
+.comment .card-image {
+  font-size: 0.5em;
+  /* margin-bottom: 10px; */
+}
