@@ -225,5 +225,26 @@ span a {
 
 .comment .card-image {
   font-size: 0.5em;
+  vertical-align: top;
   /* margin-bottom: 10px; */
+}
+
+.comment-text {
+  font-size: x-small;
+  display: inline-block;
+  width: 85%;
+  word-wrap: break-word;
+}
+
+.trash {
+  float: right;
+  font-size: 0.4em;
+  margin-top: 0.9em; 
+  display: inline-block;
+}
+
+.trash:hover {
+  background-color: #808080;
+  border: solid #000 1px;
+  font-size: 0.45em;
 }
