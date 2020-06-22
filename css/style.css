@@ -226,7 +226,10 @@ span a {
 .comment .card-image {
   font-size: 0.5em;
   vertical-align: top;
-  /* margin-bottom: 10px; */
+}
+
+.comment {
+  margin-top: 0.2em;
 }
 
 .comment-text {
@@ -234,12 +237,14 @@ span a {
   display: inline-block;
   width: 85%;
   word-wrap: break-word;
+  margin-left: 1em;
+  margin-top: 0.4em;
 }
 
 .trash {
   float: right;
   font-size: 0.4em;
-  margin-top: 0.9em; 
+  margin-top: 0.9em;
   display: inline-block;
 }
 
