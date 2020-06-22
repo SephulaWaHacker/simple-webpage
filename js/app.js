@@ -36,6 +36,13 @@ const commentText = (comment) => {
 };
 
 const trash = () => {
+  const span = elemFactory("span"),
+  icon = elemFactory("i");
 
+  span.classList.add("trash");
+  icon.classList.add("fas","fa-trash");
+  span.appendChild(icon);
+
+  return span;
 };
 
