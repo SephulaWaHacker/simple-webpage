@@ -46,3 +46,15 @@ const trash = () => {
   return span;
 };
 
+const setComment = () => {
+  const viewComments = document.getElementById("view-comments");
+};
+
+const inputData = (num) => {
+  let text = document.getElementById("num");
+  if(!text) throw "Comment cannot be empty";
+  return text;
+};
+
+
+
