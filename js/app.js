@@ -46,15 +46,16 @@ const trash = () => {
   return span;
 };
 
-const createComment = () => {
+const createComment = (userComment, commentId) => {
   let comment, bin, text, image;
 
   comment = elemFactory("div");
   image = cardImage()
-  text = commentText(`ddddddddddddddddddddddddddddddddddd`)
+  text = commentText(userComment)
   bin = trash()
 
   comment.classList.add("comment")
+  comment.setAttribute("", `comment_${commentId}`)
   comment.appendChild(image);
   comment.appendChild(text);
   comment.appendChild(bin);
@@ -65,7 +66,6 @@ const createComment = () => {
 const setComment = () => {
   const viewComments = document.getElementById("view-comments");
   const comment = createComment();
-  console.log(comment);
 
   viewComments.appendChild(comment);
 };
@@ -136,5 +136,28 @@ const saveComment = (postId) => {
     console.log(lastValue)
     // setComment()  
  }
+
 };
+
+const setAllComments = (cursor) => {
+  const viewComments = document.getElementById(`view-comments-${cursor.postId}`);
+  const comment = createComment(cursor.comment, cursor.id);
+  
+  console.log(comment)
+  
+  viewComments.appendChild(comment);
+};
+
+(() => {
+  let request = db.transaction("commentsStore");
+  let store = request.objectStore("commentsStore");
+  
+  store.openCursor().onsuccess = (e) => {
+    let cursor = e.target.result;
+    if(cursor){
+      setAllComments(cursor)
+    }
+  }
+  return
+})();
 
