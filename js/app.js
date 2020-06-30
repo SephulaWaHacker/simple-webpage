@@ -55,7 +55,7 @@ const createComment = (userComment, commentId) => {
   bin = trash()
 
   comment.classList.add("comment")
-  comment.setAttribute("", `comment_${commentId}`)
+  comment.setAttribute("id", `comment_${commentId}`)
   comment.appendChild(image);
   comment.appendChild(text);
   comment.appendChild(bin);
@@ -140,24 +140,28 @@ const saveComment = (postId) => {
 };
 
 const setAllComments = (cursor) => {
-  const viewComments = document.getElementById(`view-comments-${cursor.postId}`);
-  const comment = createComment(cursor.comment, cursor.id);
-  
-  console.log(comment)
+  const viewComments = document.getElementById(`view-comments-${cursor.value.postId}`);
+  const comment = createComment(cursor.value.comment, cursor.value.id);
   
   viewComments.appendChild(comment);
 };
 
 (() => {
-  let request = db.transaction("commentsStore");
-  let store = request.objectStore("commentsStore");
-  
-  store.openCursor().onsuccess = (e) => {
-    let cursor = e.target.result;
-    if(cursor){
-      setAllComments(cursor)
+  let tx, store;
+
+  request.onsuccess = (e) => {
+    db = request.result;
+    tx = db.transaction("commentsStore");
+    store = tx.objectStore("commentsStore");
+    
+    store.openCursor().onsuccess = (e) => {
+      let cursor = e.target.result;
+      if(cursor){
+        setAllComments(cursor)
+        cursor.continue();
+      }
     }
-  }
+  };
   return
 })();
 
