@@ -40,6 +40,7 @@ const trash = () => {
   icon = elemFactory("i");
 
   span.classList.add("trash");
+  span.addEventListener("click", remove, false)
   icon.classList.add("fas","fa-trash");
   span.appendChild(icon);
 
@@ -48,11 +49,11 @@ const trash = () => {
 
 const createComment = (userComment, commentId) => {
   let comment, bin, text, image;
-
   comment = elemFactory("div");
   image = cardImage()
   text = commentText(userComment)
   bin = trash()
+  bin.setAttribute("id", `delete_${commentId}`)
 
   comment.classList.add("comment")
   comment.setAttribute("id", `comment_${commentId}`)
@@ -139,6 +140,10 @@ const saveComment = (postId) => {
 
 };
 
+function remove() {
+  console.log(this)
+}
+
 const setAllComments = (cursor) => {
   const viewComments = document.getElementById(`view-comments-${cursor.value.postId}`);
   const comment = createComment(cursor.value.comment, cursor.value.id);
@@ -160,7 +165,8 @@ const setAllComments = (cursor) => {
         setAllComments(cursor)
         cursor.continue();
       }
-    }
+    };
+
   };
   return
 })();
