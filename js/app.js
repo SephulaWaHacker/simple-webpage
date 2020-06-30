@@ -133,8 +133,8 @@ const saveComment = (postId) => {
   
   request.oncomplete = (e) => {
     lastValue = getAll.result[getAll.result.length - 1]
-    console.log(getAll.result)
     console.log(lastValue)
     // setComment()  
  }
 };
+
