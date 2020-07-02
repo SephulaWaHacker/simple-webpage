@@ -141,15 +141,28 @@ const saveComment = (postId) => {
   }
   
   request.oncomplete = (e) => {
-    lastValue = getAll.result[getAll.result.length - 1]
-    console.log(lastValue)
-    setComment(lastValue)  
+    lastValue = getAll.result[getAll.result.length - 1];
+    console.log(lastValue);
+    setComment(lastValue);
  }
 
 };
 
 function remove() {
-  console.log(this)
+  let commentId, comment, request, store;
+
+  commentId = parseInt(this.id.split("_")[1], 10);
+  console.log(commentId);
+  comment = document.getElementById(`comment_${commentId}`);
+
+  request = db.transaction(["commentsStore"], "readwrite");
+  store = request.objectStore("commentsStore");
+
+  store.delete(commentId);
+
+  request.oncomplete = (e) => {
+    comment.remove()
+ };
 }
 
 
