@@ -64,12 +64,20 @@ const createComment = (userComment, commentId) => {
   return comment;
 };
 
-const setComment = () => {
-  const viewComments = document.getElementById("view-comments");
-  const comment = createComment();
+const setComment = (commentObj) => {
+  const viewComments = document.getElementById(`view-comments-${commentObj.postId}`);
+  const comment = createComment(commentObj.comment, commentObj.id);
 
   viewComments.appendChild(comment);
 };
+
+const setAllComments = (cursor) => {
+  const viewComments = document.getElementById(`view-comments-${cursor.value.postId}`);
+  const comment = createComment(cursor.value.comment, cursor.value.id);
+  
+  viewComments.appendChild(comment);
+};
+
 
 const inputData = (num) => {
   let text = document.getElementById(num).value;
@@ -135,7 +143,7 @@ const saveComment = (postId) => {
   request.oncomplete = (e) => {
     lastValue = getAll.result[getAll.result.length - 1]
     console.log(lastValue)
-    // setComment()  
+    setComment(lastValue)  
  }
 
 };
@@ -144,12 +152,6 @@ function remove() {
   console.log(this)
 }
 
-const setAllComments = (cursor) => {
-  const viewComments = document.getElementById(`view-comments-${cursor.value.postId}`);
-  const comment = createComment(cursor.value.comment, cursor.value.id);
-  
-  viewComments.appendChild(comment);
-};
 
 (() => {
   let tx, store;
